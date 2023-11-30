@@ -1,8 +1,9 @@
-package com.zelda.zeldaservice.controller;
+package com.github.api_projeto_final.zelda_service.controller;
 
-import com.zelda.zeldaservice.model.ZeldaApi;
-import com.zelda.zeldaservice.model.ZeldaApiList;
-import com.zelda.zeldaservice.service.ZeldaService;
+
+import com.github.api_projeto_final.zelda_service.model.*;
+import com.github.api_projeto_final.zelda_service.service.ZeldaService;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

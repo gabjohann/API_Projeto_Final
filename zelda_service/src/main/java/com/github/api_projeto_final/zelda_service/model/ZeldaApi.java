@@ -1,4 +1,4 @@
-package com.zelda.zeldaservice.model;
+package com.github.api_projeto_final.zelda_service.model;
 
 import lombok.Data;
 
@@ -6,6 +6,6 @@ import lombok.Data;
 public class ZeldaApi {
 
     private Boolean success;
-    private DadosGamesZeldaDTO data;
+    private DataGamesZelda data;
 
 }

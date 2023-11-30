@@ -1,7 +1,7 @@
-package com.zelda.zeldaservice.service;
+package com.github.api_projeto_final.zelda_service.service;
 
-import com.zelda.zeldaservice.model.ZeldaApi;
-import com.zelda.zeldaservice.model.ZeldaApiList;
+import  com.github.api_projeto_final.zelda_service.model.*;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

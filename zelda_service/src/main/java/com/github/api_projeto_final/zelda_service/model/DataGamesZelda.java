@@ -1,11 +1,11 @@
-package com.zelda.zeldaservice.model;
+package com.github.api_projeto_final.zelda_service.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class DadosGamesZelda {
+public class DataGamesZelda {
 
     private String name;
     private String description;
