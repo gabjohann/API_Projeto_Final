@@ -1,23 +1,56 @@
 package com.github.api_projeto_final.zelda_service.service;
 
-import  com.github.api_projeto_final.zelda_service.model.*;
+import com.github.api_projeto_final.zelda_service.model.*;
+import com.github.api_projeto_final.zelda_service.controller.*;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.util.*;
+
+import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 @Service
+@Slf4j
 public class ZeldaService {
-
-    public ZeldaApi findByIdGames(String id) {
-        RestTemplate restTemplate = new RestTemplate();
-        String URL = String.format("https://zelda.fanapis.com/api/games/%s", id);
-        return restTemplate.getForEntity(URL, ZeldaApi.class).getBody();
+    private final WebClient webClient;
+    public ZeldaService(WebClient.Builder builder){
+        webClient = builder.baseUrl("https://zelda.fanapis.com/api/games").build();
     }
 
-    public ZeldaApiList listGames() {
-        RestTemplate restTemplate = new RestTemplate();
-        String URL = "https://zelda.fanapis.com/api/games";
-        return restTemplate.getForEntity(URL, ZeldaApiList.class).getBody();
+    public Flux<ZeldaApi> getGames(){
+        log.info("Buscando Jogos");
+        return webClient
+                .get()
+                .accept(APPLICATION_JSON)
+                .retrieve()
+                .onStatus(HttpStatusCode::is4xxClientError,error -> Mono.error(new RuntimeException("Verifique os parâmetros informados!")))
+                .bodyToFlux(ZeldaApi.class)
+                ;
     }
+
+    public Mono<ZeldaApiList> getGameByID(String id){
+        log.info("Buscando jogo pelo!");
+        return webClient
+                .get()
+                .uri("/{game_id}", id)
+                .accept(APPLICATION_JSON)
+                .retrieve()
+                .onStatus(HttpStatusCode::is4xxClientError,error -> Mono.error(new RuntimeException("Verifique os parâmetros informados!")))
+                .bodyToMono(ZeldaApiList.class)
+                ;
+    }
+
+
 
 }
+
+//   private static final String apiGame = "https://zelda.fanapis.com/api/games";
+// private static final String apiGameID = "https://zelda.fanapis.com/api/games/:game_ID";

@@ -1,31 +1,32 @@
 package com.github.api_projeto_final.zelda_service.controller;
 
-
-import com.github.api_projeto_final.zelda_service.model.*;
 import com.github.api_projeto_final.zelda_service.service.ZeldaService;
+import com.github.api_projeto_final.zelda_service.model.ZeldaApi;
+import com.github.api_projeto_final.zelda_service.model.ZeldaApiList;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/zelda")
-@RequiredArgsConstructor
+@AllArgsConstructor
+@RequestMapping("/webclient")
 public class ZeldaController {
 
-    private final ZeldaService zeldaService;
-
-    @GetMapping("/{id}")
-    public ResponseEntity<ZeldaApi> findByIdGames(@PathVariable String id) {
-        return ResponseEntity.ok(zeldaService.findByIdGames(id));
+    @Autowired
+    ZeldaService zeldaService;
+    @GetMapping("/games")
+    public Flux<ZeldaApi> getAllGames(){
+        return zeldaService.getGames();
     }
 
-    @GetMapping("/")
-    public ResponseEntity<ZeldaApiList> listGames() {
-        return ResponseEntity.ok(zeldaService.listGames());
+    @GetMapping("/games/{id}")
+    public Mono<ZeldaApiList> getGameById(@PathVariable String id){
+        return zeldaService.getGameByID(id);
     }
 }
