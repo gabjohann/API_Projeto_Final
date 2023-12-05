@@ -8,9 +8,9 @@ public class GatewayConf{
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("user", r -> r.path("/user")
-                    .uri("http://localhost:PORTA/user"))
+                    .uri("http://localhost:8081/user"))
                 .route("zelda", r -> r.path("/zelda")
-                    .uri("http://localhost:PORTA/zelda"))
+                    .uri("http://localhost:8082/zelda"))
                 .build();
     }
 }
