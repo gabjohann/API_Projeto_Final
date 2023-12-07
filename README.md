@@ -60,6 +60,51 @@ https://docs.zelda.fanapis.com/docs
 
  ## Equipe 
 
+<table>
+<tr>
+<td align="center">
+<a href="#">
+<img src="https://github.com/gabjohann.pngConectar a conta do Github " width="100px;" alt="Foto do Lucas Johann"/><br>
+<sub>
+<b>Lucas Johann</b>
+</sub>
+</a>
+</td>
+<td align="center">
+<a href="#">
+<img src="https://github.com/davi-Ksk.pngConectar a conta do Github " width="100px;" alt="Foto do Davi Kraieski"/><br>
+<sub>
+<b>Davi Kraieski</b>
+</sub>
+</a>
+</td>
+<td align="center">
+<a href="#">
+<img src="https://github.com/Clarke2302.pngConectar a conta do Github " width="100px;" alt="Foto do Clarke Brasil"/><br>
+<sub>
+<b>Clarke Brasil</b>
+</sub>
+</a>
+</td>
+<td align="center">
+<a href="#">
+<img src="https://github.com/GabrielMartinsPastoriza.pngConectar a conta do Github " width="100px;" alt="Foto do Gabriel Martins"/><br>
+<sub>
+<b>Gabriel Martins</b>
+</sub>
+</a>
+</td>
+<td align="center">
+<a href="#">
+<img src="https://github.com/CruzNathan.pngConectar a conta do Github " width="100px;" alt="Foto do Nathan da Cruz"/><br>
+<sub>
+<b>Nathan da Cruz</b>
+</sub>
+</a>
+</td>
+</tr>
+</table>
+
 
 ## License
 
