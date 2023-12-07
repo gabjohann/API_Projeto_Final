@@ -1,4 +1,4 @@
-
+<img src="" width=""> 
 # Projeto Final Api Zelda
 
 
@@ -64,7 +64,7 @@ https://docs.zelda.fanapis.com/docs
 <tr>
 <td align="center">
 <a href="#">
-<img src="https://github.com/gabjohann.pngConectar a conta do Github " width="100px;" alt="Foto do Lucas Johann"/><br>
+<img src="https://github.com/gabjohann.png" width="100px;" alt="Foto do Lucas Johann"/><br>
 <sub>
 <b>Lucas Johann</b>
 </sub>
@@ -72,7 +72,7 @@ https://docs.zelda.fanapis.com/docs
 </td>
 <td align="center">
 <a href="#">
-<img src="https://github.com/davi-Ksk.pngConectar a conta do Github " width="100px;" alt="Foto do Davi Kraieski"/><br>
+<img src="https://avatars.githubusercontent.com/u/51761519?v=4" width="100px;" alt="Foto do Davi Kraieski"/><br>
 <sub>
 <b>Davi Kraieski</b>
 </sub>
@@ -80,9 +80,9 @@ https://docs.zelda.fanapis.com/docs
 </td>
 <td align="center">
 <a href="#">
-<img src="https://github.com/Clarke2302.pngConectar a conta do Github " width="100px;" alt="Foto do Clarke Brasil"/><br>
+<img src="https://media.licdn.com/dms/image/D4D03AQFUEsjv-y10Kg/profile-displayphoto-shrink_400_400/0/1689191084662?e=1707350400&v=beta&t=Y-Y3h6y2XdQzaHyjtew1_gsJD-IQ_DBgj5uo3Swxh4w" width="100px;" alt="Foto do Marco Marchi"/><br>
 <sub>
-<b>Clarke Brasil</b>
+<b>Marco Marchi</b>
 </sub>
 </a>
 </td>
@@ -90,7 +90,7 @@ https://docs.zelda.fanapis.com/docs
 <a href="#">
 <img src="https://github.com/GabrielMartinsPastoriza.pngConectar a conta do Github " width="100px;" alt="Foto do Gabriel Martins"/><br>
 <sub>
-<b>Gabriel Martins</b>
+<b>Christian Valini</b>
 </sub>
 </a>
 </td>
@@ -98,7 +98,7 @@ https://docs.zelda.fanapis.com/docs
 <a href="#">
 <img src="https://github.com/CruzNathan.pngConectar a conta do Github " width="100px;" alt="Foto do Nathan da Cruz"/><br>
 <sub>
-<b>Nathan da Cruz</b>
+<b>Vagner da Silva /b>
 </sub>
 </a>
 </td>
