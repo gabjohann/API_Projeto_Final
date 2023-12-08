@@ -88,7 +88,7 @@ https://docs.zelda.fanapis.com/docs
 </td>
 <td align="center">
 <a href="#">
-<img src="https://github.com/GabrielMartinsPastoriza.pngConectar a conta do Github " width="100px;" alt="Foto do Gabriel Martins"/><br>
+<img src="https://avatars.githubuserco" width="100px;" alt="Foto do Christian Valini"/><br>
 <sub>
 <b>Christian Valini</b>
 </sub>
@@ -96,9 +96,9 @@ https://docs.zelda.fanapis.com/docs
 </td>
 <td align="center">
 <a href="#">
-<img src="https://github.com/CruzNathan.pngConectar a conta do Github " width="100px;" alt="Foto do Nathan da Cruz"/><br>
+<img src="https://avatars.githubusercontent.com/u/89532080?v=4" width="100px;" alt="Foto do Nathan da Cruz"/><br>
 <sub>
-<b>Vagner da Silva /b>
+<b>Vagner da Silva </b>
 </sub>
 </a>
 </td>
