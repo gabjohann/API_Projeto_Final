@@ -63,7 +63,7 @@ https://docs.zelda.fanapis.com/docs
 <table>
 <tr>
 <td align="center">
-<a href="#">
+<a href="https://github.com/gabjohann">
 <img src="https://github.com/gabjohann.png" width="100px;" alt="Foto do Lucas Johann"/><br>
 <sub>
 <b>Lucas Johann</b>
@@ -71,7 +71,7 @@ https://docs.zelda.fanapis.com/docs
 </a>
 </td>
 <td align="center">
-<a href="#">
+<a href="https://github.com/Davi-Ksk">
 <img src="https://avatars.githubusercontent.com/u/51761519?v=4" width="100px;" alt="Foto do Davi Kraieski"/><br>
 <sub>
 <b>Davi Kraieski</b>
@@ -79,7 +79,7 @@ https://docs.zelda.fanapis.com/docs
 </a>
 </td>
 <td align="center">
-<a href="#">
+<a href="https://github.com/MarquinCss"
 <img src="https://media.licdn.com/dms/image/D4D03AQFUEsjv-y10Kg/profile-displayphoto-shrink_400_400/0/1689191084662?e=1707350400&v=beta&t=Y-Y3h6y2XdQzaHyjtew1_gsJD-IQ_DBgj5uo3Swxh4w" width="100px;" alt="Foto do Marco Marchi"/><br>
 <sub>
 <b>Marco Marchi</b>
@@ -87,7 +87,7 @@ https://docs.zelda.fanapis.com/docs
 </a>
 </td>
 <td align="center">
-<a href="#">
+<a href="https://github.com/Jujubileuu">
 <img src="https://avatars.githubuserco" width="100px;" alt="Foto do Christian Valini"/><br>
 <sub>
 <b>Christian Valini</b>
@@ -95,8 +95,8 @@ https://docs.zelda.fanapis.com/docs
 </a>
 </td>
 <td align="center">
-<a href="#">
-<img src="https://avatars.githubusercontent.com/u/89532080?v=4" width="100px;" alt="Foto do Nathan da Cruz"/><br>
+<a href="https://github.com/vaguinhu">
+<img src="https://avatars.githubusercontent.com/u/89532080?v=4" width="100px;" alt="Foto do Vagner da Silva"/><br>
 <sub>
 <b>Vagner da Silva </b>
 </sub>
