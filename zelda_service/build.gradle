@@ -31,6 +31,7 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'io.projectreactor:reactor-test'
+	runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('bootBuildImage') {
@@ -40,3 +41,4 @@ tasks.named('bootBuildImage') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+

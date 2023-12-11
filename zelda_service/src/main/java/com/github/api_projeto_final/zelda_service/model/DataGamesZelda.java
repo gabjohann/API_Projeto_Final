@@ -7,6 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class DataGamesZelda {
@@ -16,6 +17,10 @@ public class DataGamesZelda {
     private String publisher;
     private String released_date;
     private String id;
+
+    public String getId() {
+        return id;
+    }
 
     public DataGamesZelda(zeldaDTO data){
         this.name = data.name();

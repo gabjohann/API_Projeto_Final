@@ -1,19 +1,13 @@
 package com.github.api_projeto_final.zelda_service.service;
 
 import com.github.api_projeto_final.zelda_service.model.*;
-import com.github.api_projeto_final.zelda_service.controller.*;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.*;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 

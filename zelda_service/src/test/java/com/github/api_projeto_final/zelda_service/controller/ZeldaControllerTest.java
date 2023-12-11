@@ -4,39 +4,37 @@ import com.github.api_projeto_final.zelda_service.dtos.zeldaDTO;
 import com.github.api_projeto_final.zelda_service.model.DataGamesZelda;
 import com.github.api_projeto_final.zelda_service.model.ZeldaApi;
 import com.github.api_projeto_final.zelda_service.model.ZeldaApiList;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.test.StepVerifier;
-
-import javax.swing.text.html.parser.Entity;
-import javax.xml.crypto.Data;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
-import java.math.BigDecimal;
-import java.util.Optional;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(MockitoExtension.class)
 @DataJpaTest
 @ActiveProfiles("test")
 class ZeldaControllerTest {
     @Autowired
     TestEntityManager entityManager;
-    @Autowired
-    ZeldaController zeldaController;
+    @Mock
+    ZeldaController controller;
+    @Mock
+    WebClient webClient;
+    @Mock
+    DataGamesZelda dataGamesZelda;
+    zeldaDTO zeldaDTO;
 
     @Test
     void getAllGamesSuccess() {
@@ -48,7 +46,7 @@ class ZeldaControllerTest {
         zeldaDTO data2 = new zeldaDTO("Nome2", "Descrição2", "Desenvolvedor2", "Publisher2", "00/00/00", id2);
         this.createGame(data2);
 
-        Flux<ZeldaApi> result = this.zeldaController.getAllGames();
+        Flux<ZeldaApi> result = this.controller.getAllGames();
 
         assertNotNull(result);
     }
@@ -63,7 +61,7 @@ class ZeldaControllerTest {
         zeldaDTO data4 = new zeldaDTO("Nome4", "Descrição4", "Desenvolvedor4", "Publisher4", "00/00/00", id4);
         this.createGame(data4);
 
-        Flux<ZeldaApi> result = this.zeldaController.getAllGames();
+        Flux<ZeldaApi> result = this.controller.getAllGames();
 
         assertNotNull(result);
     }
@@ -74,7 +72,7 @@ class ZeldaControllerTest {
         zeldaDTO data = new zeldaDTO("Nome1", "Descrição1", "Desenvolvedor1", "Publisher1", "00/00/00", id);
         this.createGame(data);
 
-        Mono<ZeldaApiList> result = this.zeldaController.getGameById(id);
+        Mono<ZeldaApiList> result = this.controller.getGameById(id);
 
         assertNotNull(result);
     }
@@ -83,14 +81,14 @@ class ZeldaControllerTest {
     void getGameByIdError() {
         String id = "2";
 
-        Mono<ZeldaApiList> result = this.zeldaController.getGameById(id);
+        Mono<ZeldaApiList> result = this.controller.getGameById(id);
 
         assertNull(result);
     }
 
-    private DataGamesZelda createGame(zeldaDTO data){
+    @BeforeEach
+    private void createGame(zeldaDTO data){
         DataGamesZelda newGame = new DataGamesZelda(data);
         this.entityManager.persist(newGame);
-        return newGame;
     }
 }
