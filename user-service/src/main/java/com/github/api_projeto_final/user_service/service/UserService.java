@@ -6,6 +6,7 @@ import com.github.api_projeto_final.user_service.model.UserModel;
 import com.github.api_projeto_final.user_service.repository.UsersRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -14,7 +15,13 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class UserService {
+
+    @Autowired
     private final UsersRepository usersRepository;
+
+    public UserService(UsersRepository usersRepository) {
+        this.usersRepository = usersRepository;
+    }
 
     public UserModel addUser(@RequestBody @Valid UserDTO userDTO) {
         if (usersRepository.findByName(userDTO.getName()).isPresent()) {

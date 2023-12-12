@@ -19,5 +19,31 @@ public class UserModel {
     @NotBlank
     private int age;
 
+    //O Lombok não estava ativando os Getter e Setter automaticamente. Criei esses de maneira temporária.
+
+    public Long getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(Long id_user) {
+        this.id_user = id_user;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public UserModel(@NotBlank(message = "O nome do usuário é obrigatório!") String name, @NotEmpty(message = "A idade do usuário é obrigatória!") int age) {}
 }

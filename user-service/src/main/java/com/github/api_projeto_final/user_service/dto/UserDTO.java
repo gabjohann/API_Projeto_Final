@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-
 @Data
 @AllArgsConstructor
 @Builder
@@ -15,4 +14,23 @@ public class UserDTO {
 
     @NotEmpty(message = "A idade do usuário é obrigatória!")
     private int age;
+
+
+    //O Lombok não estava ativando os Getter e Setter automaticamente. Criei esses de maneira temporária.
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
