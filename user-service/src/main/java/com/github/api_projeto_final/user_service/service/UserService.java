@@ -5,6 +5,8 @@ import com.github.api_projeto_final.user_service.handler.GenericError;
 import com.github.api_projeto_final.user_service.model.UserModel;
 import com.github.api_projeto_final.user_service.repository.UsersRepository;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +18,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserService {
 
-    @Autowired
     private final UsersRepository usersRepository;
 
-    public UserService(UsersRepository usersRepository) {
-        this.usersRepository = usersRepository;
-    }
 
     public UserModel addUser(@RequestBody @Valid UserDTO userDTO) {
         if (usersRepository.findByName(userDTO.getName()).isPresent()) {
