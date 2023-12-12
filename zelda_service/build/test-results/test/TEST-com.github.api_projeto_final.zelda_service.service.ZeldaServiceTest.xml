@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.api_projeto_final.zelda_service.service.ZeldaServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-12T04:20:46" hostname="DESKTOP-Q4OC1D1" time="7.201">
+  <properties/>
+  <testcase name="getAllGamesError()" classname="com.github.api_projeto_final.zelda_service.service.ZeldaServiceTest" time="7.201"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
